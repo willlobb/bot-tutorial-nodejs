@@ -1,4 +1,6 @@
 var HTTPS = require('https');
+var cool = require('cool-ascii-faces');
+
 var botID = process.env.BOT_ID;
 
 function respond() {
@@ -19,8 +21,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  // Generate a random number and convert it to string
-  botResponse = Math.floor(Math.random() * 10000).toString();
+  botResponse = cool();
 
   options = {
     hostname: 'api.groupme.com',
